@@ -1,0 +1,12 @@
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+        System.out.println("Java is working perfectly!");
+
+        int a = 10;
+        int b = 20;
+
+        System.out.println("Sum = " + (a + b));
+    }
+}
