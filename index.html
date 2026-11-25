@@ -5,70 +5,266 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VinayKumar | Portfolio</title>
+
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            max-width: 850px;
-            margin: 60px auto;
-            padding: 20px;
+            background: #0f172a;
+            color: #e2e8f0;
             line-height: 1.7;
-            color: #222;
-            background: #f5f5f5;
         }
-        main {
-            background: white;
-            padding: 30px;
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: #111827;
+            position: sticky;
+            top: 0;
+        }
+
+        nav h2 {
+            color: #38bdf8;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        .hero {
+            min-height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px 10%;
+        }
+
+        .hero p {
+            color: #38bdf8;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin: 15px 0;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero .intro {
+            max-width: 650px;
+            color: #94a3b8;
+            margin-bottom: 25px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 22px;
+            background: #38bdf8;
+            color: #0f172a;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            width: fit-content;
+        }
+
+        section {
+            padding: 65px 10%;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 25px;
+            color: #38bdf8;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            padding: 10px 18px;
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 8px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            padding: 25px;
+            background: #1e293b;
+            border: 1px solid #334155;
             border-radius: 12px;
+            transition: transform 0.2s;
         }
-        h1, h2 {
-            color: #1f2937;
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
         }
-        a {
-            color: #2563eb;
+
+        .card h3 {
+            margin-bottom: 12px;
+            color: white;
+        }
+
+        .card p {
+            color: #94a3b8;
+        }
+
+        .contact a {
+            color: #38bdf8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #94a3b8;
+            border-top: 1px solid #334155;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 8px;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
         }
     </style>
 </head>
+
 <body>
-    <main>
-        <h1>Hi! I'm VinayKumar</h1>
-        <p>
-            B.Tech Computer Science and Engineering student at REVA University.
-            I am passionate about technology, software development,
-            cybersecurity and building real-world projects.
+
+    <nav>
+        <h2>VinayKumar.</h2>
+
+        <div>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <p>WELCOME TO MY PORTFOLIO</p>
+
+        <h1>Hi, I'm <span>VinayKumar</span></h1>
+
+        <p class="intro">
+            A Computer Science Engineering student passionate about
+            programming, technology and building real-world software.
+            Currently exploring C++, web development, IoT and cybersecurity.
         </p>
 
-        <h2>Learning Goals</h2>
-        <ul>
-            <li>Learning Python and C++ programming.</li>
-            <li>Interested in cybersecurity, cloud computing and software development.</li>
-            <li>Building real-world software projects and contributing to open source.</li>
-        </ul>
+        <a class="button"
+           href="https://github.com/Vinay-Hiremath7">
+            Explore My GitHub
+        </a>
+    </header>
 
-        <h2>Projects</h2>
-        <ul>
-            <li>
-                <strong>Portfolio Website:</strong>
-                A personal portfolio repository documenting my programming journey,
-                skills, interests and projects.
-            </li>
-            <li>
-                <strong>Apartment Management System:</strong>
-                A web application designed to manage apartment residents,
-                facilities, notices and maintenance.
-            </li>
-            <li>
-                <strong>ChargeMitra:</strong>
-                A community-based EV charging platform connecting
-                EV users with charging hosts.
-            </li>
-        </ul>
+    <section id="about">
+        <h2>About Me</h2>
 
-        <h2>GitHub</h2>
         <p>
+            I'm a B.Tech Computer Science and Engineering student
+            at REVA University. I enjoy learning new technologies,
+            improving my programming skills and developing projects
+            that solve real-world problems. I'm continuously exploring
+            software development and emerging technologies.
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+
+        <div class="skills">
+            <div class="skill">C</div>
+            <div class="skill">C++</div>
+            <div class="skill">Python</div>
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">MySQL</div>
+            <div class="skill">DBMS</div>
+            <div class="skill">Git & GitHub</div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="project-grid">
+
+            <div class="card">
+                <h3>Apartment Management System</h3>
+                <p>
+                    A web application designed to manage apartment
+                    residents, facilities, notices and maintenance.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>ChargeMitra</h3>
+                <p>
+                    A community-based EV charging platform
+                    connecting EV users with charging hosts.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Portfolio Website</h3>
+                <p>
+                    My personal portfolio website showcasing
+                    my skills, learning journey and projects.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Connect With Me</h2>
+
+        <p>
+            GitHub:
             <a href="https://github.com/Vinay-Hiremath7">
-                Visit my GitHub profile
+                Vinay-Hiremath7
             </a>
         </p>
-    </main>
+    </section>
+
+    <footer>
+        <p>© 2026 VinayKumar | Built with HTML & CSS</p>
+    </footer>
+
 </body>
 </html>
